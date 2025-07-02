@@ -32,6 +32,7 @@ Interface web interativa para:
 ## 2. Script Secundário: `analise_mercado2015.py` (Análise de Entidades)
 
 Script para:
+- Baixar a base de dados em https://www.kaggle.com/datasets/marlesson/news-of-the-site-folhauol
 - Ler o arquivo `data/articles.csv`
 - Filtrar notícias da seção "Mercado" do 1º trimestre de 2015
 - Extrair entidades do tipo organização usando o modelo `monilouise/ner_pt_br`
