@@ -1,23 +1,23 @@
-# Análise de Entidades em Notícias do Mercado (1º Trimestre de 2015)
+# AnÃ¡lise de Entidades em NotÃ­cias do Mercado (1Âº Trimestre de 2015)
 
-Repositório: [https://github.com/paulo-rogerio-oliveira/llm.git](https://github.com/paulo-rogerio-oliveira/llm.git)
+RepositÃ³rio: [https://github.com/paulo-rogerio-oliveira/llm.git](https://github.com/paulo-rogerio-oliveira/llm.git)
 
-Este projeto reúne duas aplicações principais para análise de textos jornalísticos da seção "Mercado":
+Este projeto reÃºne duas aplicaÃ§Ãµes principais para anÃ¡lise de textos jornalÃ­sticos da seÃ§Ã£o "Mercado":
 
-- **Principal:** `app.py` ? Aplicação Streamlit para sumarização de textos usando LLMs (HuggingFace ou OpenAI)
-- **Secundário:** `analise_mercado2015.py` ? Script para análise de entidades nomeadas (organizações) nas notícias do 1º trimestre de 2015
+- **Principal:** `app.py` ? AplicaÃ§Ã£o Streamlit para sumarizaÃ§Ã£o de textos usando LLMs (HuggingFace ou OpenAI)
+- **SecundÃ¡rio:** `analise_mercado2015.py` ? Script para anÃ¡lise de entidades nomeadas (organizaÃ§Ãµes) nas notÃ­cias do 1Âº trimestre de 2015
 
 ---
 
-## 1. Aplicação Principal: `app.py` (Sumarizador com LLM)
+## 1. AplicaÃ§Ã£o Principal: `app.py` (Sumarizador com LLM)
 
 Interface web interativa para:
-- Inserir textos de artigos/notícias
-- Gerar resumos automáticos usando modelos LLM (via HuggingFace ou OpenAI)
+- Inserir textos de artigos/notÃ­cias
+- Gerar resumos automÃ¡ticos usando modelos LLM (via HuggingFace ou OpenAI)
 
 ### Como executar
 
-1. Instale as dependências:
+1. Instale as dependÃªncias:
    ```bash
    pip install -r requirements.txt
    ```
@@ -25,22 +25,21 @@ Interface web interativa para:
    ```bash
    streamlit run app.py
    ```
-3. Siga as instruções na interface para inserir o texto e o token HuggingFace (ou chave OpenAI, se aplicável).
+3. Siga as instruÃ§Ãµes na interface para inserir o texto e o token HuggingFace (ou chave OpenAI, se aplicÃ¡vel).
 
 ---
 
-## 2. Script Secundário: `analise_mercado2015.py` (Análise de Entidades)
+## 2. Script SecundÃ¡rio: `analise_mercado2015.py` (AnÃ¡lise de Entidades)
 
 Script para:
-- Baixar a base de dados em https://www.kaggle.com/datasets/marlesson/news-of-the-site-folhauol
-- Ler o arquivo `data/articles.csv`
-- Filtrar notícias da seção "Mercado" do 1º trimestre de 2015
-- Extrair entidades do tipo organização usando o modelo `monilouise/ner_pt_br`
-- Gerar ranking, gráfico e relatório das organizações mais citadas
+- Ler o arquivo `data/articles.csv` que deve ser baixado em https://www.kaggle.com/datasets/marlesson/news-of-the-site-folhauol
+- Filtrar notÃ­cias da seÃ§Ã£o "Mercado" do 1Âº trimestre de 2015
+- Extrair entidades do tipo organizaÃ§Ã£o usando o modelo `monilouise/ner_pt_br`
+- Gerar ranking, grÃ¡fico e relatÃ³rio das organizaÃ§Ãµes mais citadas
 
 ### Como executar
 
-1. Instale as dependências (se ainda não instalou):
+1. Instale as dependÃªncias (se ainda nÃ£o instalou):
    ```bash
    pip install -r requirements.txt
    ```
@@ -48,31 +47,31 @@ Script para:
    ```bash
    python analise_mercado2015.py
    ```
-3. Os resultados serão salvos como:
-   - `ranking_organizacoes_mercado2015.png` (gráfico)
-   - `relatorio_mercado2015.txt` (relatório)
+3. Os resultados serÃ£o salvos como:
+   - `ranking_organizacoes_mercado2015.png` (grÃ¡fico)
+   - `relatorio_mercado2015.txt` (relatÃ³rio)
 
 ---
 
 ## Estrutura dos Dados
 O arquivo de entrada deve estar em `data/articles.csv` e conter pelo menos as colunas:
-- `date`: data da notícia
-- `section`: categoria/seção da notícia (ex: "Mercado")
-- `content`: conteúdo/texto da notícia
+- `date`: data da notÃ­cia
+- `section`: categoria/seÃ§Ã£o da notÃ­cia (ex: "Mercado")
+- `content`: conteÃºdo/texto da notÃ­cia
 
 ---
 
-## Observações
+## ObservaÃ§Ãµes
 - O processamento pode ser demorado dependendo do tamanho do arquivo e do hardware.
-- O modelo NER é carregado automaticamente da HuggingFace.
-- O arquivo `data/articles.csv` está no `.gitignore` e não é versionado.
+- O modelo NER Ã© carregado automaticamente da HuggingFace.
+- O arquivo `data/articles.csv` estÃ¡ no `.gitignore` e nÃ£o Ã© versionado.
 
 ---
 
-## Repositório
+## RepositÃ³rio
 [https://github.com/paulo-rogerio-oliveira/llm.git](https://github.com/paulo-rogerio-oliveira/llm.git)
 
 ---
 
-## Licença
-Este projeto é apenas para fins educacionais e de demonstração. 
+## LicenÃ§a
+Este projeto Ã© apenas para fins educacionais e de demonstraÃ§Ã£o. 
